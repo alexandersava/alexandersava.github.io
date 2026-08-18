@@ -95,6 +95,10 @@ footer p{font-size:.82rem;color:var(--muted)}
 footer .wordmark{font-size:.85rem}
 
 @media(max-width:640px){
+  .acum a{grid-template-columns:1fr auto;grid-template-areas:'cand unde' 'ce ce';padding:12px 14px}
+  .acum .cand{grid-area:cand}
+  .acum .unde{grid-area:unde;white-space:normal;text-align:right}
+  .acum .ce{grid-area:ce;font-size:.92rem;line-height:1.45}
   .semnaturi{grid-template-columns:1fr}
   .semnal{grid-template-columns:1fr;gap:6px}
   .stare{justify-self:start;text-align:left}
@@ -105,7 +109,8 @@ footer .wordmark{font-size:.85rem}
   @keyframes apar{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 }
 .acum{margin-top:24px;display:grid;gap:10px}
-.acum a{display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:baseline;background:var(--panou);border:1px solid var(--linie);padding:14px 18px;text-decoration:none;color:var(--text);transition:border-color .15s}
+.acum a{display:grid;grid-template-columns:auto 1fr auto;gap:6px 14px;align-items:baseline;background:var(--panou);border:1px solid var(--linie);padding:14px 18px;text-decoration:none;color:var(--text);transition:border-color .15s;min-width:0}
+.acum .ce{min-width:0;overflow-wrap:anywhere}
 .acum a:hover{border-color:var(--accent)}
 .acum .cand{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;color:var(--muted);white-space:nowrap}
 .acum .ce{font-size:.95rem}
